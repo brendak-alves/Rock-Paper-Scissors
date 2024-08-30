@@ -3,17 +3,17 @@ function getRandomInt() {
 }
 
 
-let cc = "";
+let computerResultString = "";
 
 function getComputerChoice (){
     if (getRandomInt() === 0) {
-        cc = "rock";
+        computerResultString = "rock";
         return console.log("The computer choose rock");
     } else if (getRandomInt() === 1) {
-        cc = "scissors";
+        computerResultString = "scissors";
         return console.log("The computer choose scissors");
     } else {
-        cc = "paper";
+        computerResultString = "paper";
         return console.log("The computer choose paper");
     }
 }
@@ -31,18 +31,18 @@ let humanScore = 0;
 
 
 function playRound(computerChoice, humanChoice) {
-    computerChoice = cc;
+    computerChoice = computerResultString;
 
-    if (humanChoice === "rock" && cc === "scissors") {
+    if (humanChoice === "rock" && computerResultString === "scissors") {
         console.log ("You win! Rock beats Scissors.");
         humanScore += 1;
-    } else if (humanChoice === "scissors" && cc === "paper") {
+    } else if (humanChoice === "scissors" && computerResultString === "paper") {
        console.log("You win! Scissors beats Paper.");
        humanScore+= 1;
-    } else if (humanChoice === "paper" && cc === "rock") {
+    } else if (humanChoice === "paper" && computerResultString === "rock") {
         console.log("You win! Paper beats Rock.");
         humanScore+= 1;
-    } else if (humanChoice === cc) {
+    } else if (humanChoice === computerResultString) {
         console.log("Draw! No one scored.");
     } else {
         console.log("You lose!");
