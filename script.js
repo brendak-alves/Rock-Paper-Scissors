@@ -1,10 +1,8 @@
-//Gera um número inteiro aleatório entre 0 e 2
-
 function getRandomInt() {
     return Math.floor(Math.random() * 3);
 }
 
-//Gera uma string baseada no resultado do getRandomInt
+
 let cc = "";
 
 function getComputerChoice (){
@@ -21,21 +19,16 @@ function getComputerChoice (){
 }
 
 
-//Receber uma string do usuário e retorna essa string em minúsculo 
-
 function getHumanChoice() {
     let humanAnswer = prompt("Rock, Scissors or Paper?");
     return humanAnswer.toLowerCase();
 
 }
 
-//Variáveis da para contabilizar a pontuação
 
 let computerScore = 0;
 let humanScore = 0;
 
-
-//Faz as comparações entre a escolha do usuário e a escolha do computador e atribui valor as variáveis de pontuação
 
 function playRound(computerChoice, humanChoice) {
     computerChoice = cc;
@@ -58,16 +51,13 @@ function playRound(computerChoice, humanChoice) {
 
 }
 
-//Atribui as funções às variáveis que serão utilizadas como parâmetros para testar o playround
-//const computerSelection = getComputerChoice();
-//const humanSelection = getHumanChoice();
-
 
 function playGame() {
     for (let i = 1; i <= 5; i++) {
         playRound(getComputerChoice(), getHumanChoice());
     }
 }
+
 
 function showScore() {
     console.log(computerScore);
@@ -79,6 +69,7 @@ function showScore() {
         alert("Oh, no! You lose! D:");
     }
 }
+
 
 playGame();
 showScore();
